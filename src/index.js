@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import TopNav from './components/common/topnav';
 import Home from './components/Home';
 import Play from './components/Play';
 import Community from './components/Community';
@@ -32,7 +33,8 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <div className="index m-auto">
+  <div className="index m-auto relative">
+    <TopNav/>
     <React.StrictMode>
       <RouterProvider router={router}/>
     </React.StrictMode>

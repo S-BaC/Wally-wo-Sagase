@@ -1,4 +1,3 @@
-import '../components.css';
 
 export default function Community() {
   return (
