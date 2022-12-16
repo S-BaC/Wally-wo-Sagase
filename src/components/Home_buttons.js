@@ -7,12 +7,12 @@ export default function buttons() {
             <Link to={'play'} className="hover:bg-white hover:text-blue-600 hover:font-bold bg-blue-600 text-white px-2 py-1 rounded-lg">
                 Play
             </Link>
-            <Link to={'community'} className="hover:bg-white hover:text-blue-600 hover:font-bold bg-blue-600 text-white px-2 py-1 rounded-lg">
+            {/* <Link to={'community'} className="hover:bg-white hover:text-blue-600 hover:font-bold bg-blue-600 text-white px-2 py-1 rounded-lg">
                 Community
             </Link>
             <Link to={'about'} className="hover:bg-white hover:text-blue-600 hover:font-bold bg-blue-600 text-white px-2 py-1 rounded-lg">
                 About
-            </Link>
+            </Link> */}
         </div>
     );
 }

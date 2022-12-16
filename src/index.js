@@ -18,22 +18,22 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // import { initializeApp } from "firebase/app/dist/index.cjs";
 // import { getFirestore, collection, getDocs } from 'https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase-firestore.js';
 // import '@firebase/firestore';
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
-import { getFirestore, collection, getDocs, addDocs } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js';
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+// import { getFirestore, collection, getDocs, addDocs } from 'https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js';
 
-const firebaseConfig = {
-  apiKey: "AIzaSyCc3hjP0cMh8C8z03hNCbpzn0Ol7wItFzg",
-  authDomain: "wallywosagase.firebaseapp.com",
-  projectId: "wallywosagase",
-  storageBucket: "wallywosagase.appspot.com",
-  messagingSenderId: "118721858523",
-  appId: "1:118721858523:web:491a5b7fdcea9ac36db5fe",
-  measurementId: "G-KM0JXSF2M9"
-};
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCc3hjP0cMh8C8z03hNCbpzn0Ol7wItFzg",
+//   authDomain: "wallywosagase.firebaseapp.com",
+//   projectId: "wallywosagase",
+//   storageBucket: "wallywosagase.appspot.com",
+//   messagingSenderId: "118721858523",
+//   appId: "1:118721858523:web:491a5b7fdcea9ac36db5fe",
+//   measurementId: "G-KM0JXSF2M9"
+// };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const db = getFirestore(app);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -43,16 +43,8 @@ root.render(
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="play" element={<Play db={db} />}>
-          <Route index element={(
-              <div>
-                <LevelGp title="Newbie" db = {db} level={"Cards_Newbie"}/>
-                <LevelGp title="Regular" db = {db} level={"Cards_Regular"}/>
-                <LevelGp title="Pro" db = {db} level={"Cards_Pro"}/>
-              </div>
-          )} />
-          <Route path=":id" element={<Game db={db} />} />
-        </Route>
+        <Route path="/play" element={<Play />} />
+        <Route path="/play/:id" element={<Game />} />
 
         {/* <Route path="review" element={<Error />}>
           <Route path=":id" element={<Review />} />
